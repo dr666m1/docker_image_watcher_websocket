@@ -17,6 +17,6 @@ def search_new_figure(client, server):
         latest_update = max([latest_update] + tmp_update)
         time.sleep(5)
 if __name__ == "__main__":
-    server = WebsocketServer(9999, host="localhost")
+    server = WebsocketServer(9999, host="0.0.0.0")
     server.set_fn_new_client(search_new_figure)
     server.run_forever()
